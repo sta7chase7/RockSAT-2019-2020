@@ -1,0 +1,27 @@
+#Author:			Segev Morgan
+#
+#General Description:		Code for sending and reciveing on telemetry
+#
+#Version:			1.0
+#
+#Note: Please use the Mountain Time zone and 24-hour/military time.
+#Daylight/Standard Time:	Daylight
+#Start Date/Time:		12/1/2019, 2:10
+#End-of-Revision Date/Time:	12/1/2019, 2:25
+#Copyright:			CCoC RockSat 2019/2020
+#					
+#Inputs:			Important variables' names, their data types, and uses: ESPECIALLY how they will affect/pass information to other files.
+    #camera_arm_satus from Arm_function. 
+    #Status of camera arm
+#					
+#Outputs:			same standard as for inputs
+    #TE2 Staus of the TE-2 power pins 
+#							
+#Usage:				Interacting with telemetry
+#
+
+while camera_arm_cycle = true:
+  camera_tele_pins = True
+
+if TE2_pins = True:
+  TE2 = True
