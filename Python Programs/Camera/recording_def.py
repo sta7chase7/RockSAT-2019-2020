@@ -1,3 +1,5 @@
+#Pi = Apollo
+#Program to split video
 import cv2
 import numpy as np
 import time
