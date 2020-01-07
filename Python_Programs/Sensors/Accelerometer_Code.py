@@ -1,5 +1,6 @@
 # This code will be used to controll the Accelerometer sensor
 # Documantation @ https://learn.adafruit.com/adafruit-mma8451-accelerometer-breakout/python-circuitpython
+
 import board
 import busio
 import adafruit_mma8451
