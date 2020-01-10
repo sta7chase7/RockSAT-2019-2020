@@ -1,0 +1,12 @@
+import analogio
+import board
+import time
+import busio
+import multiprocessing
+import RPi.GPIO
+
+from adafruit_motorkit import MotorKit
+
+#Not actively in use:
+import adafruit_mma8451
+import adafruit_veml6070

@@ -1,6 +1,7 @@
 # This code will be used to controll the Accelerometer sensor
 # Documantation @ https://learn.adafruit.com/adafruit-mma8451-accelerometer-breakout/python-circuitpython
 
+#the acceleration range of this sensor is too small for our application - see ADXL377 code.
 import board
 import busio
 import adafruit_mma8451

@@ -84,5 +84,3 @@ if TE2 = True:
     #checks accelormeter for rocket speed
     TE2_Timer.start()
     retract_timer.start()
-
-
