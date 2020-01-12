@@ -15,8 +15,6 @@
   #TE2 Status from rocket VIA GPIO pins
 #False = fairing is on
 #True = fairing has deployed
-    
-
 							
 #Outputs:			same standard as for inputs
 

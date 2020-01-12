@@ -19,6 +19,7 @@ import Sensors.Distance_Code_vl53l0x
 import Sensors.Temperature_Code_TMP36
 
 #UV sensor
+import Sensors.UV_Code_veml6070
 
 #May need separate folders and inits for each file import
 #https://stackoverflow.com/questions/50559539/import-a-file-from-another-location-python

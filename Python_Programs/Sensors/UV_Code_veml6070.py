@@ -6,9 +6,12 @@ import busio
 import board
 import adafruit_veml6070
 
-with busio.I2C(board.SCL, board.SDA) as i2c:
-    uv = adafruit_veml6070.VEML6070(i2c)
-    uv_raw = uv.read
-    risk_level = uv.get_index(uv_raw)
+def UV_values():
+    with busio.I2C(board.SCL, board.SDA) as i2c:
+        uv = adafruit_veml6070.VEML6070(i2c)
+        uv_raw = uv.read
+        risk_level = uv.get_index(uv_raw)
+    return [uv_raw,risk_level]
 
-print('Reading: {0} | Risk Level: {1}'.format(uv_raw, risk_level))
+def UV_print(uv_raw, risk_level):
+    print('Reading: {0} | Risk Level: {1}'.format(uv_raw, risk_level))
