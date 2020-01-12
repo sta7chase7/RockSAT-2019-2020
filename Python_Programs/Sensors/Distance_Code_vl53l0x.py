@@ -5,7 +5,13 @@ import board
 import busio
 import adafruit_vl53l0x
 
-i2c = busio.I2C(board.SCL, board.SDA)
-sensor = adafruit_vl53l0x.VL53L0X(i2c)
+def dist_create_input():
+    i2c = busio.I2C(board.SCL, board.SDA)
+    return i2c
 
-print('Range: {}mm'.format(sensor.range))
+def dist_grab_data(i2c):
+    sensor = adafruit_vl53l0x.VL53L0X(i2c)
+    return sensor
+
+def dist_print_data(sensor):
+    print('Range: {}mm'.format(sensor.range))

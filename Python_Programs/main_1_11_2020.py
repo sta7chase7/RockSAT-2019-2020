@@ -32,13 +32,12 @@ import Sensors.UV_Code_veml6070
 #send "power on" signal to MADV
 #Send "start recording" signal to MADV
 
-
-
-
 #List of things to do (unordered)
 #--------------------------------
 #
 #set delay for time between GSE-On and launch (see CDR)
 #offset timer by GSE-On delay
+#
+#
 #
 #--------------------------------
