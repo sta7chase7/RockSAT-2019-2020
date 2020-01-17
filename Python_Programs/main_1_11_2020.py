@@ -1,10 +1,13 @@
+import time
+initial_time_s = time.perf_counter()
+
 #imports
 import analogio
 import board
-import time
 import busio
 import multiprocessing
 import RPi.GPIO
+import subprocess
 
 #Motor stuff
 from adafruit_motorkit import MotorKit
@@ -35,12 +38,18 @@ distance_input = distance_create_input()
 #send "power on" signal to MADV
 #Send "start recording" signal to MADV
 
+
+
+
+
 #List of things to do (unordered)
 #--------------------------------
 #
 #set delay for time between GSE-On and launch (see CDR)
 #offset timer by GSE-On delay
+
 #
+#upon launch,
 #
-#
+#upon  
 #--------------------------------
