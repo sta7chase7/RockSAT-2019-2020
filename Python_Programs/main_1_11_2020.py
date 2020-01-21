@@ -16,18 +16,15 @@ import Sensors.Accelerometer_Code_ADXL377
 import Sensors.Distance_Code_vl53l0x
 import Sensors.Temperature_Code_TMP36
 
-#
-
 #May need separate folders and inits for each file import
 #https://stackoverflow.com/questions/50559539/import-a-file-from-another-location-python
 
-
 #create input objects:
 
-#need to define input pins
 xyz_accel_list = accel_create_input_3ax(x_pin,y_pin,z_pin)
 temp_input = temp_create_input(temp_pin)
 distance_input = distance_create_input()
+#need to define input pins for input objects
 
 #read and print data:
 
