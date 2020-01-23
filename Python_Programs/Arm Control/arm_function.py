@@ -15,7 +15,6 @@
   #TE2 Status from rocket VIA GPIO pins
 #False = fairing is on
 #True = fairing has deployed
-							
 #Outputs:			same standard as for inputs
 
   #camera_arm_satus Output status for GPIO pins to Telemetry Analog line
@@ -25,8 +24,6 @@
 #Test Input/Output Values:
 #	Input Values:
 #	Output Values:
-
-
 
 #Import
 from adafruit_motorkit import MotorKit
