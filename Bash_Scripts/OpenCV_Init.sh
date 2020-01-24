@@ -1,6 +1,5 @@
 #!/bin/bash
 # Pi = Apollo
 # A scrip that starts the OpenCV virtual environment
-#Test Change
 
 workon cv
