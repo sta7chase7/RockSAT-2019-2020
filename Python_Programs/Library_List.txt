@@ -1,11 +1,18 @@
-import analogio
 import board
 import time
 import busio
 import multiprocessing
 import RPi.GPIO
 
+import adafruit_vl53l0x
+import adafruit_tmp006
 from adafruit_motorkit import MotorKit
+
+Pip these as well{
+pip install Adafruit-Blinka
+pip install adafruit-circuitpython-busdevice
+pip install adafruit-circuitpython-motorkit
+}
 
 #Not actively in use:
 import adafruit_mma8451
