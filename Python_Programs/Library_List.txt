@@ -13,6 +13,3 @@ pip install Adafruit-Blinka
 pip install adafruit-circuitpython-busdevice
 pip install adafruit-circuitpython-motorkit
 }
-
-#Not actively in use:
-import adafruit_mma8451

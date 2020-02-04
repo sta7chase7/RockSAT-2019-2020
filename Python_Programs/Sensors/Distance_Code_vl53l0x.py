@@ -7,9 +7,6 @@ import adafruit_vl53l0x
 
 def dist_create_input():
     i2c = busio.I2C(board.SCL, board.SDA)
-    return i2c
-
-def dist_grab_data(i2c):
     sensor = adafruit_vl53l0x.VL53L0X(i2c)
     return sensor
 
