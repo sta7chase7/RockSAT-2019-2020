@@ -16,7 +16,7 @@ def create_TMP006():
 # Initialize communication with the sensor, using the default 16 samples per conversion.
 # This is the best accuracy but a little slower at reacting to changes.
 # The first sample will be meaningless
-def return_temp_TMP006():
+def return_temp_TMP006(sensor):
     while True:
         obj_temp = sensor.temperature
         time.sleep(1.0)
