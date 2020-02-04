@@ -20,4 +20,4 @@ def return_temp_TMP006():
     while True:
         obj_temp = sensor.temperature
         time.sleep(1.0)
-        return '{0:0.3F}*C / {1:0.3F}*F'.format(obj_temp, c_to_f(obj_temp)))
+        return '{0:0.3F}*C / {1:0.3F}*F'.format(obj_temp, c_to_f(obj_temp))
