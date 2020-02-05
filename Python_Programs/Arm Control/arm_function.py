@@ -54,7 +54,6 @@ def arm_extend():
   for i in range(100):
     #range needs to change depending on arm requirements
     kit1.stepper1.onestep(direction.FORWARD)
-    kit1.stepper2.onestep(direction.FORWARD)
     camera_arm = False
     camera_arm_satus = True
 
@@ -63,7 +62,6 @@ def arm_retract():
   for i in range(100):
     #range needs to change depending on arm requirements 
     kit1.stepper1.onestep(direction.BACKWARD)
-    kit1.stepper2.onestep(direction.BACKWARD)
     camera_arm = True
     camera_arm_satus = False
 
