@@ -7,17 +7,18 @@ from adafruit_motor import stepper
 #direction -  or 1 or 2 - null, backward or forward, respectively
 #running - 0 or 1 or 2 - null, not running, running, respectively
 #________________________________
-def full_move(move_cmd,direction=0,running=0):
+def full_move(move_cmd,direction=0,running=1):
     kit = MotorKit()
     direction_map = [stepper.BACKWARD, stepper.FORWARD]
-    step_count = 100
+    step_count = 1000
     status_array = []
-    sleep_between_steps = 0.1
+    sleep_between_steps = 0.01
     if move_cmd == 1:
         #set move_cmd state to true
         status_array.append(0)
         if running == 2:
             print("Process already running!")
+            return status_array
         if running == 1:
             try:
                 #update direction state in output list
@@ -29,8 +30,11 @@ def full_move(move_cmd,direction=0,running=0):
                     #kit.stepper1.onestep(direction=stepper.direction_map[direction], style=stepper.DOUBLE)
                     kit.stepper1.onestep(direction=direction_map[direction], style=stepper.DOUBLE)
                     time.sleep(sleep_between_steps)
+                return status_array
             except:
                 print("error!")
+                return status_array
     if move_cmd == 0:
         status_array = [0,0,0]
-    return status_array
+        return status_array
+#    return status_array
