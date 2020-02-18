@@ -9,7 +9,7 @@ from adafruit_motor import stepper
 #________________________________
 def full_move(move_cmd,direction=0,running=0):
     kit = MotorKit()
-    direction_map = [stepper.backward, stepper.forward]
+    direction_map = [stepper.BACKWARD stepper.FORWARD]
     step_count = 100
     sleep_between_steps = 0.1
     if move_cmd == 1:
