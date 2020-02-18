@@ -9,9 +9,9 @@ from adafruit_motor import stepper
 #________________________________
 def full_move(move_cmd,direction=0,running=0):
     kit = MotorKit()
-    direction_map = [BACKWARD, FORWARD]
+    direction_map = [stepper.backward, stepper.forward]
     step_count = 100
-    sleep_between_steps = 0.001
+    sleep_between_steps = 0.1
     if move_cmd == 1:
         #set move_cmd state to true
         status_array.append(0)
@@ -25,7 +25,8 @@ def full_move(move_cmd,direction=0,running=0):
                 status_array.append(2)
 
                 for i in range(step_count):
-                    kit.stepper1.onestep(direction=stepper.direction_map[direction], style=stepper.DOUBLE)
+                    #kit.stepper1.onestep(direction=stepper.direction_map[direction], style=stepper.DOUBLE)
+                    kit.stepper1.onestep(direction=direction_map[direction], style=stepper.DOUBLE)
                     time.sleep(sleep_between_steps)
             except:
                 print("error!")
