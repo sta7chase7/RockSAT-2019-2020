@@ -4,18 +4,18 @@ from adafruit_motor import stepper
 #________________________________
 #Inputs:
 #move_cmd - 0 or 1 - whether or not the motor is being commanded to move
-#direction -  or 1 or 2 - null, backward or forward, respectively
+#direction - 0 or 1 - null, backward or forward, respectively
 #running - 0 or 1 or 2 - null, not running, running, respectively
 #________________________________
 def full_move(move_cmd,direction=0,running=1):
     kit = MotorKit()
     direction_map = [stepper.BACKWARD, stepper.FORWARD]
-    step_count = 1000
+    step_count = 100
     status_array = []
     sleep_between_steps = 0.01
     if move_cmd == 1:
         #set move_cmd state to true
-        status_array.append(0)
+        status_array.append(1)
         if running == 2:
             print("Process already running!")
             return status_array
