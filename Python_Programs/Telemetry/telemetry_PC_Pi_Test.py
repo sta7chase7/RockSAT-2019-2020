@@ -8,7 +8,7 @@ def readlineCR(port):
         ch = port.read()
         rv += ch
         if ch == '\r' or ch == '':
-    return rv
+            return rv
 
 
 port = serial.Serial("/dev/ttyAMA0", baudrate = 7200, timeout = 2)
