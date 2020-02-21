@@ -5,10 +5,10 @@ import time
 def readlineCR(port):
     rv = ""
     while True:
-    ch = port.read()
-    rv += ch
-    if ch == '\r' or ch == '':
-        return rv
+        ch = port.read()
+        rv += ch
+        if ch == '\r' or ch == '':
+    return rv
 
 
 port = serial.Serial("/dev/ttyAMA0", baudrate = 7200, timeout = 2)
