@@ -3,7 +3,7 @@ import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
 
 in_channel = 31
-out_channel = 30
+out_channel = 29
 
 GPIO.setup(in_channel, GPIO.IN)
 GPIO.setup(out_channel, GPIO.OUT)
