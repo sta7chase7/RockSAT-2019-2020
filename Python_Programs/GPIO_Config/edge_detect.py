@@ -3,8 +3,8 @@ import time
 
 GPIO.setmode(GPIO.BCM)
 
-in_channel = 31
-out_channel = 29
+in_channel = 6
+out_channel = 5
 
 GPIO.setup(in_channel, GPIO.IN)
 GPIO.setup(out_channel, GPIO.OUT)
@@ -19,4 +19,5 @@ if GPIO.event_detected(in_channel):
 print("sleeping!")
 time.sleep(10)
 print("done sleeping!")
+
 GPIO.cleanup()
