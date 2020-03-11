@@ -1,4 +1,5 @@
 import RPi.GPIO as GPIO
+import time
 
 GPIO.setmode(GPIO.BCM)
 
@@ -15,3 +16,7 @@ print("output pin set to high")
 
 if GPIO.event_detected(in_channel):
     print('output!')
+print("sleeping!")
+time.sleep(10)
+print("done sleeping!")
+GPIO.cleanup()
