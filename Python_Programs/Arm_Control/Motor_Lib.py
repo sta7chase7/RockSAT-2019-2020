@@ -1,6 +1,8 @@
 import time
 from adafruit_motorkit import MotorKit
 from adafruit_motor import stepper
+
+#recheck and make sure this is up to date with code syntax
 #________________________________
 #Inputs:
 #move_cmd - 0 or 1 - whether or not the motor is being commanded to move
