@@ -1,6 +1,5 @@
 import RPi.GPIO as GPIO
 import time
-import 
 
 #Pin modes
 #0 = GPIO.OUT
