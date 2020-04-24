@@ -12,3 +12,4 @@ def dist_create_input():
 
 def dist_print_data(sensor):
     print('Range: {}mm'.format(sensor.range))
+

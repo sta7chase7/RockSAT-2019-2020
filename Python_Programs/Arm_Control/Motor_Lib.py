@@ -27,7 +27,6 @@ def full_move(move_cmd,direction=0,running=1):
                 status_array.append(2)
 
                 for i in range(step_count):
-                    #kit.stepper1.onestep(direction=stepper.direction_map[direction], style=stepper.DOUBLE)
                     kit.stepper1.onestep(direction=direction_map[direction], style=stepper.DOUBLE)
                     time.sleep(sleep_between_steps)
                 return status_array
@@ -35,6 +34,6 @@ def full_move(move_cmd,direction=0,running=1):
                 print("error!")
                 return status_array
     if move_cmd == 0:
-        status_array = [0,0,0]
+#        status_array = [0,0,0]
         return status_array
     return status_array
