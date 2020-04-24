@@ -1,45 +1,19 @@
 import RPi.GPIO as GPIO
 import time
 
-#Pin modes
-#0 = GPIO.OUT
-#1 = GPIO.IN
-#40 = GPIO.SERIAL
-#41 = GPIO.SPI
-#42 = GPIO.I2C
-#43 = GPIO.HARD_PWM
-#-1 = GPIO.UNKNOWN
+#These functions' pins need to be tested with a voltmeter
+def TE_1_Event(out_channel):
+    GPIO.output(out_channel, GPIO.HIGH)
+    #time.sleep may cause the arm function to start extend/retract cycle WHILE signal is high, not just once around. Test!
+    #suspend state for 2s
+    time.sleep(2)
+    #Reset pin state
+    GPIO.output(out_channel, GPIO.LOW)
+    #Note: remove all print statements before final payload integration
+    return 1
 
-#Reference BCM pin convention; see pinout.xyz.
-#GPIO pinout does not vary across Pi models.
-GPIO.setmode(GPIO.BCM)
-
-
-
-#Assign I/O channel BCM numbers.
-#Max BCIM number on Pi's appears to be 26.
-in_channel_TE1 = 17
-in_channel_TER = 27
-
-out_channel_TE1 = 5
-out_channel_TER = 6
-
-#Reconfigure the following pins to the proper modes;
-    #BCM 17,27 - Inputs
-    #BCM 5, 6 - Outputs
-GPIO.setup(in_channel_TE1, GPIO.IN)
-GPIO.setup(in_channel_TER, GPIO.IN)
-
-GPIO.setup(out_channel_TE1, GPIO.OUT)
-GPIO.setup(out_channel_TER, GPIO.OUT)
-
-str = """GPIO.wait_for_edge(in_channel_TE1, GPIO.RISING)
-
-GPIO.output(out_channel, GPIO.HIGH)
-print("output pin set to high")
-
-if GPIO.event_detected(in_channel):
-    print('output!')
-"""
-
-#GPIO.cleanup()
+def TE_R_Event():
+    GPIO.output(out_channel_TER, GPIO.HIGH)
+    time.sleep(2)
+    GPIO.output(out_channel, GPIO.LOW)
+    return 1

@@ -37,3 +37,4 @@ def full_move(move_cmd,direction=0,running=1):
 #        status_array = [0,0,0]
         return status_array
     return status_array
+    
