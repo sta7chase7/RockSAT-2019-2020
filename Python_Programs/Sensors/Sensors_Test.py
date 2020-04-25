@@ -1,8 +1,11 @@
 import board
 import busio
 import time
-import Temperature_Code_TMP006 as T6
-import Distance_Code_vl53l0x as D
+import Libraries.Temperature_Code_TMP006 as T6
+import Libraries.Distance_Code_vl53l0x as D
+
+#Note: Python does appear to be okay with making imports multiple times;
+#The imported project code libraries also contain imports of regular Python libraries.
 
 #create sensor objects
 dist_sensor = D.dist_create_input()
