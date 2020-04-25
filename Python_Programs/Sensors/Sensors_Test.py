@@ -1,6 +1,8 @@
 import board
 import busio
 import time
+
+#Note: Include relative directory for main import
 import Libraries.Temperature_Code_TMP006 as T6
 import Libraries.Distance_Code_vl53l0x as D
 
@@ -13,7 +15,6 @@ temp_sensor = T6.create_TMP006()
 
 print("temp output!")
 print(T6.return_temp_TMP006(temp_sensor))
-print("\n")
 
 print("dist output!")
 print(D.dist_print_data(dist_sensor))
