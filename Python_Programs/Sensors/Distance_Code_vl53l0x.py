@@ -11,5 +11,5 @@ def dist_create_input():
     return sensor
 
 def dist_print_data(sensor):
-    print('Range: {}mm'.format(sensor.range))
-
+    #distance is in mm
+    return sensor.range
