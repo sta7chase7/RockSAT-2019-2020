@@ -9,3 +9,7 @@ ser = serial.Serial(
         bytesize=serial.EIGHTBITS,
         timeout=1
 )
+
+while 1:
+        x=ser.readline()
+        print x
