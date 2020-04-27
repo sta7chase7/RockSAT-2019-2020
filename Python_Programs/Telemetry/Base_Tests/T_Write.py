@@ -13,7 +13,7 @@ counter=0
 
 while 1:
         #encode the counter variable to a binary string
-        ser.write(format(counter, "b"))
+        ser.write("{0:b}".format(37))
         time.sleep(1)
         counter += 1
-        print(format(counter, "b"))
+        print("{0:b}".format(37))
