@@ -13,7 +13,7 @@ counter=0
 
 while 1:
         #encode the counter variable to a binary string
-        thing_to_send = bytes(str(counter), encoding='utf8')
+        thing_to_send = bytes(str(counter) + "\n", encoding='utf8')
         ser.write(thing_to_send)
         time.sleep(1)
         counter += 1
