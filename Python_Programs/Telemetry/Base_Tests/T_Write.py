@@ -19,7 +19,8 @@ while 1:
         counter += 1
         print(thing_to_send)
 
-array_collect():
+
+#array_collect():
         #Define default array elements
                 #include non-standard escape character as last array element
         #mission time [locally counted by pi's]
@@ -38,12 +39,12 @@ array_collect():
         #work out timing; function should wait for a time interval, not the presence of all data elements, to 
         #return array of byte values
 
-array_filesave():
+#array_filesave():
         #take input from array_collect
         #convert to [numpy?] array and save as txt every few minutes
         #figure out how to avoid having missed values
 
-telemetry_send():
+#telemetry_send():
         #Take in byte array
         #Send it with no delay
         
