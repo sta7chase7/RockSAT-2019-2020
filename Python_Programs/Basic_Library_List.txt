@@ -1,0 +1,19 @@
+import board
+import time
+import busio
+import multiprocessing
+import serial
+import RPi.GPIO
+
+import adafruit_vl53l0x
+import adafruit_tmp006
+from adafruit_motorkit import MotorKit
+
+Pip these as well{
+pip install pyserial
+pip install Adafruit-Blinka
+pip install adafruit-circuitpython-busdevice
+pip install adafruit-circuitpython-motorkit
+
+Bash tool for MADV power toggle: uhubctl
+}
