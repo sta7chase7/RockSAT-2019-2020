@@ -12,7 +12,5 @@ GPIO.setmode(GPIO.BCM)
 #43 = GPIO.HARD_PWM
 #-1 = GPIO.UNKNOWN
 
-#The GPIO.UNKNOWN pins should be our primary candidates for TE-1 and TE-R inputs
-
 for g in range(54):
     print("gpio {} is {}".format(g, GPIO.gpio_function(g)))

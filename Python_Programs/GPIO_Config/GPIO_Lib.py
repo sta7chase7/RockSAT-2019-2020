@@ -21,6 +21,7 @@ def TE_R_Event(out_channel):
     return 1
 
 #Get data on MADV terminal timing in order to fill these out.
+#Add state information returns
 
 def MADV_On():
     return 1

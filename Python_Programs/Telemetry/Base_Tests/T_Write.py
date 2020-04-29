@@ -1,6 +1,9 @@
 import time
 import serial
 
+#Keep this code as it is, move function definitions and object constructor to a library.
+
+#make serial object: needs 19200 baud, no parity, 8 bits/byte, and 1 stop bit
 ser = serial.Serial(
         port='/dev/ttyS0', #Replace ttyS0 with ttyAM0 for Pi1,Pi2,Pi0
         baudrate = 19200,
@@ -12,13 +15,12 @@ ser = serial.Serial(
 counter=0
 
 while 1:
-        #encode the counter variable to a binary string
+        #encode the input value to a byte array [migrate out of this loop later]
         thing_to_send = bytes(str(counter) + "\n", encoding='utf8')
         ser.write(thing_to_send)
         time.sleep(1)
         counter += 1
         print(thing_to_send)
-
 
 #array_collect():
         #Define default array elements
@@ -34,7 +36,9 @@ while 1:
                 #See relevant script; move_cmd, direction, running?
         #MADV state info [power, recording state]
                 #Get further details once it's tested
-        #note to add static indexing to values
+        #Secondary camera state info
+
+        #note to add static indexes to values
         #Regularly convert all data to bytes
         #work out timing; function should wait for a time interval, not the presence of all data elements, to 
         #return array of byte values
@@ -45,6 +49,5 @@ while 1:
         #figure out how to avoid having missed values
 
 #telemetry_send():
-        #Take in byte array
-        #Send it with no delay
-        
+        #Take in correctly formatted byte array
+        #Send it without delay

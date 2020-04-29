@@ -1,1 +1,0 @@
-find /home/bathan/Downloads/ -name 'carrot*' -exec cp \"{}\" /home/bathan/Documents/  \;

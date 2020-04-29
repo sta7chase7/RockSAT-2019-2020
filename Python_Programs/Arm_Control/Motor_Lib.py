@@ -2,6 +2,8 @@ import time
 from adafruit_motorkit import MotorKit
 from adafruit_motor import stepper
 
+#clean up & case test
+
 #recheck and make sure this is up to date with code syntax
 #________________________________
 #Inputs:

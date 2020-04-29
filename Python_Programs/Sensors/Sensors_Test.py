@@ -3,8 +3,8 @@ import busio
 import time
 
 #Note: Include relative directory for main import
-import Libraries.Temperature_Code_TMP006 as T6
-import Libraries.Distance_Code_vl53l0x as D
+import Sensor_Libs_RSX.Temperature_Code_TMP006 as T6
+import Sensor_Libs_RSX.Distance_Code_vl53l0x as D
 
 #Note: Python does appear to be okay with making imports multiple times;
 #The imported project code libraries also contain imports of regular Python libraries.

@@ -72,8 +72,10 @@ GPIO.wait_for_edge(in_channel_TER, GPIO.RISING)
 
 #locally save data, then modify it to fit in telemetry properly
 
+#may need multi-core processing for fast pipelining from data sources to telemetry.
+
 #Determine maximum practical data rate
     #Trade offs: -Payload items for telemetry performance
     #            -Payload items' rate, also for telemetry performance.
-
+    #seems trivial, UTF-8 requires very rare characters for increased byte usage
 telemetry_array = []
