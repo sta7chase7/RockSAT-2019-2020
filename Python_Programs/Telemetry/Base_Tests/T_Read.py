@@ -3,7 +3,8 @@ import serial
 
 #make serial object: needs 19200 baud, no parity, 8 bits/byte, and 1 stop bit
 ser = serial.Serial(
-        port='/dev/ttyUSB0',
+        #If reading using an RS232->USBA adapter, change  'ttyS0' to 'ttyUSB0' [or to whatever PC port has your adapter mounted - on Linux, check this with: 'dmesg | grep tty']
+        port='/dev/ttyS0',
         baudrate = 19200,
         parity=serial.PARITY_NONE,
         stopbits=serial.STOPBITS_ONE,

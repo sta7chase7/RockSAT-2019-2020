@@ -1,2 +1,2 @@
 git fetch --all
-git reset --hard origin/master
+sudo git reset --hard origin/master

@@ -19,9 +19,8 @@ def accel_value(axis):
 
 # Main loop prints acceleration every second.
 def accel_array(x_axis,y_axis,z_axis):
-    while True:
-        x = accel_value(x_axis)
-        y = accel_value(y_axis)
-        z = accel_value(z_axis)
-        return [x,y,z]
-        time.sleep(1.0)
+    time.sleep(1.0)
+    x = accel_value(x_axis)
+    y = accel_value(y_axis)
+    z = accel_value(z_axis)
+    return [x,y,z]
