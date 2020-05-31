@@ -6,8 +6,6 @@ A third option could be to check the voltage change for MADV trigger instances, 
 
 With the right documentation, any of these instances is a route to us having software control over the MADV."""
 
-
-
 import RPi.GPIO as GPIO
 
 #Start main on boot
