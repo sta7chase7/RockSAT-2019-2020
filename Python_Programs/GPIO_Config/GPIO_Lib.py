@@ -29,6 +29,7 @@ def TE_R_Event(in_channel, out_channel, high_time):
 #Get data on MADV terminal timing in order to fill these out.
 #Add state information returns
 
+#Might hard code time events, but this is the only reason we need to have unique functions
 def MADV_On(out_channel):
     GPIO.output(out_channel, GPIO.HIGH)
     time.sleep(2)
