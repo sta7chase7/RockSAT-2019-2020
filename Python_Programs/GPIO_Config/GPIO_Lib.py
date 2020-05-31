@@ -23,21 +23,39 @@ def TE_R_Event(out_channel, high_time):
 #Get data on MADV terminal timing in order to fill these out.
 #Add state information returns
 
-def MADV_On():
+def MADV_On(out_channel):
+    GPIO.output(out_channel, GPIO.HIGH)
+    time.sleep(2)
+    GPIO.output(out_channel, GPIO.LOW)
     return 1
 
-def MADV_Off():
+def MADV_Off(out_channel, high_time):
+    GPIO.output(out_channel, GPIO.HIGH)
+    time.sleep(high_time)
+    GPIO.output(out_channel, GPIO.LOW)
     return 1
 
-def MADV_Record_Start():
+def MADV_Record_Start(out_channel, high_time):
+    GPIO.output(out_channel, GPIO.HIGH)
+    time.sleep(high_time)
+    GPIO.output(out_channel, GPIO.LOW)
     return 1
 
-def MADV_Record_Stop():
+def MADV_Record_Stop(out_channel, high_time):
+    GPIO.output(out_channel, GPIO.HIGH)
+    time.sleep(high_time)
+    GPIO.output(out_channel, GPIO.LOW)
     return 1
 
-def MADV_Recording_Mode():
+def MADV_Recording_Mode(out_channel, high_time):
+    GPIO.output(out_channel, GPIO.HIGH)
+    time.sleep(high_time)
+    GPIO.output(out_channel, GPIO.LOW)
     return 1
 
-def MADV_Storage_Mode():
+def MADV_Storage_Mode(out_channel, high_time):
+    GPIO.output(out_channel, GPIO.HIGH)
+    time.sleep(high_time)
+    GPIO.output(out_channel, GPIO.LOW)
     return 1
 

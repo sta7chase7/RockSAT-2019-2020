@@ -11,3 +11,5 @@ Password- rocksat
 -Remove print statements when all the code works
 
 -Set all Pi's to boot in headless mode, without waiting on network
+
+![](MAV_Control_States.jpg?raw=true)
