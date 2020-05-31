@@ -3,7 +3,7 @@ import time
 
 #These functions' pins need to be tested with a voltmeter
 
-#Trigger voltage changes on a BCM channel
+#Trigger voltage changes on a BCM channel (see pinout.xyz)
 def TE_1_Event(out_channel, high_time):
     GPIO.output(out_channel, GPIO.HIGH)
     #time.sleep may cause the arm function to start extend/retract cycle WHILE signal is high, not just once around. Test!
